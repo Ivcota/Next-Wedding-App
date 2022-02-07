@@ -28,6 +28,7 @@ const AdminWrittenMessages = () => {
           {snapshot?.docs.map((doc) => {
             return (
               <WrittenMessageCard
+                key={doc.id}
                 name={doc.data().name}
                 email={doc.data().email}
                 replied={doc.data().replied}
