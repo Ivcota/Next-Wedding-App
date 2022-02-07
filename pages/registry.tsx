@@ -56,6 +56,7 @@ const Registry: NextPage = () => {
           className={`${styles["button-spaced"]} button`}
           href="https://www.amazon.com/wedding/registry/2D4CFRF056QGK?ref=wr_search_page_result_1"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Amazon Registry
         </a>
@@ -64,6 +65,7 @@ const Registry: NextPage = () => {
         <a
           className={`button ${styles["button-spaced"]} ${styles["button--inactive"]} `}
           target="_blank"
+          rel="noopener noreferrer"
         >
           Target Registry
         </a>
