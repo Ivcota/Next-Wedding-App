@@ -1,3 +1,7 @@
 .button-spaced {
   margin-top: 1rem;
 }
+
+.button--inactive {
+  background-color: rgb(211, 211, 211);
+}

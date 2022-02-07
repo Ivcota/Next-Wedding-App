@@ -60,6 +60,14 @@ const Registry: NextPage = () => {
           Amazon Registry
         </a>
       </ButtonFlexContainer>
+      <ButtonFlexContainer>
+        <a
+          className={`button ${styles["button-spaced"]} ${styles["button--inactive"]} `}
+          target="_blank"
+        >
+          Target Registry
+        </a>
+      </ButtonFlexContainer>
     </MotionMainContainer>
   );
 };
