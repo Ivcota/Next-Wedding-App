@@ -31,6 +31,7 @@ const WrittenMessagePage = () => {
           email,
           message,
           replied: false,
+          date: Date.now(),
         }
       );
       resetForm();
