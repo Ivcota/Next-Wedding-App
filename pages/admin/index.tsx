@@ -15,7 +15,7 @@ const AdminRootPage = () => {
 
   // Check user auth
   const checkUserAuth = async (user: UserCredential) => {
-    const docRef = doc(db, "admin-users", user.user.uid);
+    const docRef = doc(db, "admin-users", user.user.email as string);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
