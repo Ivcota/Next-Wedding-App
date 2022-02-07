@@ -77,21 +77,22 @@ const Navbar = () => {
 
           {isAdmin ? (
             <li onClick={closeNavbar} className="navigation-item">
-              <Link href="/admin">
-                <a className="navigation-link">Sign Out</a>
-              </Link>
-            </li>
-          ) : (
-            <li onClick={closeNavbar} className="navigation-item">
-              <a
+              <div
                 onClick={(e) => {
                   e.preventDefault();
                   setAdmin(false);
                 }}
-                className="navigation-link"
               >
-                Login
-              </a>
+                <a href="#" className="navigation-link">
+                  Sign Out
+                </a>
+              </div>
+            </li>
+          ) : (
+            <li onClick={closeNavbar} className="navigation-item">
+              <Link href="/admin">
+                <a className="navigation-link">Login</a>
+              </Link>
             </li>
           )}
         </ul>
