@@ -27,6 +27,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-family: "Cormorant Garamond", serif;
+}
+
 * {
   box-sizing: border-box;
 }

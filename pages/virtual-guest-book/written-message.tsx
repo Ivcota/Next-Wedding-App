@@ -30,6 +30,7 @@ const WrittenMessagePage = () => {
           name,
           email,
           message,
+          replied: false,
         }
       );
       resetForm();

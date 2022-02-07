@@ -1,0 +1,10 @@
+.message-container {
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  max-height: 70vh;
+}
+
+.message-container::-webkit-scrollbar {
+  display: none;
+}
