@@ -32,12 +32,6 @@ const WrittenMessagePage = () => {
           message,
         }
       );
-
-      await addDoc(collection(db, "guest-book-written"), {
-        name,
-        message,
-        email,
-      });
       resetForm();
       setIsOpen(true);
     },

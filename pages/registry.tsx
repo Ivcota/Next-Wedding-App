@@ -16,9 +16,7 @@ const Registry: NextPage = () => {
       <Separator />
       {message ? (
         <div className="modal-content">
-          <p>
-            Thank you so much! We can’t wait to see your message.
-          </p>
+          <p>Thank you so much! We can’t wait to see your message.</p>
           <p>
             If you would like to see some of the things we were planning on
             getting, you can view those items through the links below.
@@ -45,7 +43,7 @@ const Registry: NextPage = () => {
         <a
           className="button"
           rel="noopener noreferrer"
-          href="https://www.zola.com/wedding/iversonandholly/registry"
+          href="https://www.zola.com/registry/iversonandholly"
           target="_blank"
         >
           Zola Registry
