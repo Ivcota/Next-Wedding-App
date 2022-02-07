@@ -8,6 +8,7 @@ import styles from "../../styles/AdminWrittenMessages.module.css";
 import { db } from "../../libs/firebase";
 import { collection, orderBy, query } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
+import { AnimatePresence, motion } from "framer-motion";
 
 const AdminWrittenMessages = () => {
   const writtenMessagesRef = collection(db, "guest-book-written");
@@ -24,19 +25,21 @@ const AdminWrittenMessages = () => {
       </div>
       <Separator />
       <AuthCheck>
-        <div className={styles["message-container"]}>
+        <motion.div className={styles["message-container"]}>
           {snapshot?.docs.map((doc) => {
             return (
-              <WrittenMessageCard
-                key={doc.id}
-                name={doc.data().name}
-                email={doc.data().email}
-                replied={doc.data().replied}
-                messageText={doc.data().message}
-              />
+              <AnimatePresence>
+                <WrittenMessageCard
+                  key={doc.id}
+                  name={doc.data().name}
+                  email={doc.data().email}
+                  replied={doc.data().replied}
+                  messageText={doc.data().message}
+                />
+              </AnimatePresence>
             );
           })}
-        </div>
+        </motion.div>
       </AuthCheck>
     </MotionMainContainer>
   );
