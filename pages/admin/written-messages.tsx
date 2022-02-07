@@ -28,7 +28,7 @@ const AdminWrittenMessages = () => {
         <motion.div className={styles["message-container"]}>
           {snapshot?.docs.map((doc) => {
             return (
-              <AnimatePresence>
+              <AnimatePresence key={doc.id}>
                 <WrittenMessageCard
                   key={doc.id}
                   name={doc.data().name}
