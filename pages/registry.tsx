@@ -5,6 +5,7 @@ import ButtonFlexContainer from "../components/ButtonFlexContainer";
 import MotionMainContainer from "../components/MotionMainContainer";
 import PageTitle from "../components/PageTitle";
 import Separator from "../components/Separator";
+import styles from "../styles/registry.module.css";
 
 const Registry: NextPage = () => {
   const router = useRouter();
@@ -47,6 +48,16 @@ const Registry: NextPage = () => {
           target="_blank"
         >
           Zola Registry
+        </a>
+      </ButtonFlexContainer>
+
+      <ButtonFlexContainer>
+        <a
+          className={`${styles["button-spaced"]} button`}
+          href="https://www.amazon.com/wedding/registry/2D4CFRF056QGK?ref=wr_search_page_result_1"
+          target="_blank"
+        >
+          Amazon Registry
         </a>
       </ButtonFlexContainer>
     </MotionMainContainer>
