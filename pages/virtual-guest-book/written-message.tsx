@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { addDoc, collection, doc, setDoc, Timestamp } from "firebase/firestore";
 import { useFormik } from "formik";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -31,7 +31,7 @@ const WrittenMessagePage = () => {
           email,
           message,
           replied: false,
-          date: Date.now(),
+          date: Timestamp.fromDate(new Date()),
         }
       );
       resetForm();
@@ -81,7 +81,9 @@ const WrittenMessagePage = () => {
             className="input input--text-area"
             placeholder="Personal Message"
           ></textarea>
-          <button className="button">Save Message to Guest Book</button>
+          <button type="submit" className="button">
+            Save Message to Guest Book
+          </button>
         </InputCard>
       </form>
 
