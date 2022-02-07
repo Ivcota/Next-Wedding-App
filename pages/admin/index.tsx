@@ -1,5 +1,6 @@
 import { UserCredential } from "@firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import ButtonFlexContainer from "../../components/ButtonFlexContainer";
@@ -10,6 +11,8 @@ import { useUserStore } from "../../libs/stores";
 import MotionMainContainer from "./../../components/MotionMainContainer";
 
 const AdminRootPage = () => {
+  const router = useRouter();
+
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const { setUserState, isAdmin, setAdmin, name } = useUserStore();
 
@@ -21,6 +24,7 @@ const AdminRootPage = () => {
     if (docSnap.exists()) {
       console.log(`${user.user.displayName} already exists.`);
       setAdmin(true);
+      router.push("/admin/dashboard");
     } else {
       alert("You're not authorized");
       setAdmin(false);

@@ -72,6 +72,10 @@ a {
   text-align: center;
 }
 
+.button--spaced {
+  margin: 0.5rem 0;
+}
+
 .input {
   font-family: "Cormorant Garamond", serif;
   background: #ffffff;
