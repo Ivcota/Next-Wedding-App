@@ -35,6 +35,24 @@ a {
   padding: 0 5vw;
 }
 
+@media (min-width: 1550px) {
+  .container {
+    padding: 0 38vw;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1550px) {
+  .container {
+    padding: 0 30vw;
+  }
+}
+
+@media (min-width: 700) and (max-width: 770px) {
+  .container {
+    padding: 0 30vw;
+  }
+}
+
 .modal-content {
   text-align: center;
 }
