@@ -1,0 +1,26 @@
+
+/* BORDER BOTTOM SKIN
+================================*/
+
+// Changing the navigation-link padding (landscape)
+$navigation-link-padding-landscape: 10px 16px 7px; 
+
+@media (min-width: $landscape-width){
+	.navigation-menu:not(.navigation-social-menu){
+		.navigation-item:not(.navigation-icon-item){
+			.navigation-link{
+				padding: $navigation-link-padding-landscape;
+				border-bottom: 3px solid transparent;
+				@include transition(color .3s, border .3s);
+			}
+		}
+	}
+	
+	.navigation-link{				
+		.navigation-item:not(.navigation-brand-text):hover &,
+		.navigation-item:not(.navigation-brand-text):focus &,
+		.navigation-item:not(.navigation-brand-text).is-active &{
+			border-bottom-color: $main-color !important;
+		}
+	}
+}

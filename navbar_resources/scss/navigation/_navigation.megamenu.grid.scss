@@ -1,0 +1,51 @@
+
+/* MEGAMENU GRID
+================================*/
+.navigation-row{
+	width: 100%;
+	@include flex();
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	
+	> [class^=navigation-col]{
+		width: 100%;
+		min-height: 20px;
+		margin-bottom: 1rem;
+		position: relative;
+	}
+	
+	.navigation-col{		
+		@media (min-width: $landscape-width){
+			flex-basis: 0;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			max-width: 100%;
+		}
+	}
+	
+	@media (min-width: $landscape-width){
+		.navigation-col-1{ -ms-flex: 0 0 8.333333%; flex: 0 0 8.333333%; max-width: 8.333333%; }
+		.navigation-col-2{ -ms-flex: 0 0 16.666666%; flex: 0 0 16.666666%; max-width: 16.666666%; }
+		.navigation-col-3{ -ms-flex: 0 0 25%; flex: 0 0 25%; max-width: 25%; }
+		.navigation-col-4{ -ms-flex: 0 0 33.333333%; flex: 0 0 33.333333%; max-width: 33.333333%; }
+		.navigation-col-5{ -ms-flex: 0 0 41.666667%; flex: 0 0 41.666667%; max-width: 41.666666%; }
+		.navigation-col-6{ -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; }
+		.navigation-col-7{ -ms-flex: 0 0 58.333333%; flex: 0 0 58.333333%; max-width: 58.333333%; }
+		.navigation-col-8{ -ms-flex: 0 0 66.666666%; flex: 0 0 66.666666%; max-width: 66.666666%; }
+		.navigation-col-9{ -ms-flex: 0 0 75%; flex: 0 0 75%; max-width: 75%; }
+		.navigation-col-10{ -ms-flex: 0 0 83.333333%; flex: 0 0 83.333333%; max-width: 83.333333%; }
+		.navigation-col-11{ -ms-flex: 0 0 91.666666%; flex: 0 0 91.666666%; max-width: 91.666666%; }
+		.navigation-col-12{ -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+	}
+	
+	&:last-of-type [class^=navigation-col]:last-child{
+		margin-bottom: 0;
+	}
+	
+	@media (min-width: $landscape-width){
+		&:last-of-type [class^=navigation-col]{
+			margin-bottom: 0;
+		}
+	}
+}

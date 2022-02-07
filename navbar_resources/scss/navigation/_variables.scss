@@ -1,0 +1,260 @@
+// GENERAL
+// ================================================
+
+// Screen size for media queries on landscape view
+$landscape-width: 992px;
+
+
+// COLOR PALETTE
+// ================================================
+$white:    		#ffffff !default;
+
+$gray-01: 		#f8f9fa !default; // more light
+$gray-02:		#e9ecef !default;
+$gray-03:		#dee2e6 !default;
+$gray-04:		#868e96 !default;
+$gray-05:		#495057 !default; // more dark
+
+$main-color:   	#7367F0 !default; // purple
+
+
+// MAIN COLORS
+// ================================================
+$background-color: $white;
+$font-color: lighten($gray-05, 5%);
+$font-color-hover: $main-color;
+$border-color: $gray-02;
+$submenu-background-color: lighten($gray-01, 1.5%);
+
+
+// NAVIGATION
+// ================================================
+$navigation-height: 60px;
+$navigation-background-color: $background-color;
+$navigation-font-family: inherit;
+
+// NAVIGATION BODY (Offcanvas panel)
+// ================================================
+$navigation-offcanvas-width: 100%;
+$navigation-offcanvas-medium-large-breakpoint: 500px;
+$navigation-offcanvas-medium-large-width: 320px;
+$navigation-body-background-color: $white;
+
+
+// NAVIGATION BODY HEADER
+// ================================================
+$navigation-body-header-padding: 16px;
+$navigation-body-header-border: $border-color;
+
+
+// NAVIGATION BODY CLOSE BUTTON
+// ================================================
+$navigation-body-close-button-color: $font-color;
+$navigation-body-close-button-font-size: 25px;
+$navigation-body-close-button-background-color: $gray-01;
+
+
+// NAVIGATION BODY SECTION
+// ================================================
+$navigation-body-section-padding: 16px;
+
+
+// BRAND TEXT
+// ================================================
+$navigation-brand-color: $font-color;
+$navigation-brand-font-size: 16px;
+$navigation-brand-font-size-landscape: 22px;
+$navigation-brand-font-weight: bold;
+
+
+// LOGO
+// ================================================
+$navigation-logo-height: 40px;
+$navigation-logo-height-landscape: 48px;
+
+
+// NAVIGATION TOGGLER BUTTON
+// ================================================
+$button-toggler-width: 60px;
+$button-toggler-height: 60px;
+$button-toggler-icon-color: $font-color;
+
+
+// NAVIGATION LINK
+// ================================================
+$navigation-link-font-color: $font-color;
+$navigation-link-font-color-hover: $font-color-hover;
+$navigation-link-font-color-hover-landscape: $font-color-hover;
+$navigation-link-font-size: 14px;
+$navigation-link-padding: 13px 16px;
+$navigation-link-padding-landscape: 10px 16px;
+$navigation-link-letter-spacing: 0.3px;
+$navigation-link-border-color: $border-color;
+$navigation-link-background-color-hover: transparent;
+
+// Navigation link with text and icons
+$navigation-link-text-icon-width: 28px;
+$navigation-link-text-icon-font-size: 24px;
+$navigation-link-text-icon-font-awesome-size: 21px;
+
+// Navigation link icon item
+$navigation-link-icon-item-padding: 13px 16px;
+$navigation-link-icon-item-padding-landscape: 25px 25.6px;
+$navigation-link-icon-item-icon-width: 20px;
+$navigation-link-icon-item-icon-height: 26px;
+$navigation-link-icon-item-font-size: 25.6px;
+$navigation-link-icon-item-font-awesome-size: 21px;
+
+// Navigation link avatar
+$navigation-link-avatar-font-size: 12px;
+$navigation-link-avatar-font-weight: bold;
+$navigation-link-avatar-image-width: 48px;
+$navigation-link-avatar-border-color: $main-color;
+$navigation-link-avatar-border-radius: 50%;
+
+
+// SOCIAL LINKS
+// ================================================
+$navigation-social-menu-padding: 0 16px;
+$navigation-social-menu-link-padding: 0 5px;
+$navigation-social-menu-icon-width: 38px;
+$navigation-social-menu-icon-height: 38px;
+$navigation-social-menu-icon-size: 19px;
+$navigation-social-menu-icon-border-radius: 50%;
+$navigation-social-menu-icon-background-color: $gray-01;
+
+
+// SUBMENU INDICATORS
+// ================================================
+$submenu-indicator-width: 46px;
+$submenu-indicator-width-landscape: 6px;
+$submenu-indicator-height-landscape: 6px;
+$submenu-indicator-width-after: 6px;
+$submenu-indicator-height-after: 6px;
+$submenu-indicator-margin-after: -3px 0 0 -3px;
+$submenu-indicator-border-width-after: 1px;
+$submenu-indicator-color: $font-color;
+$submenu-indicator-color-hover: $font-color-hover;
+$submenu-indicator-color-hover-landscape: $font-color-hover;
+
+
+// NAVIGATION BUTTON
+// ================================================
+$navigation-button-padding: 10px 12px;
+$navigation-button-font-size: 14px;
+$navigation-button-font-color-hover: $white;
+$navigation-button-background-color: $font-color-hover;
+$navigation-button-border-radius: 4px;
+
+
+// NAVIGATION TEXT
+// ================================================
+$navigation-text-padding: 11px 0;
+$navigation-text-padding-landscape: 11px 16px;
+$navigation-text-font-size: 14px;
+
+
+// BADGE
+// ================================================
+$navigation-badge-min-width: 18px !important;
+$navigation-badge-height: 18px;
+$navigation-badge-font-size: 11px;
+$navigation-badge-color: $white;
+$navigation-badge-background-color: $font-color-hover;
+$navigation-badge-border-radius: 20px;
+
+
+// INPUT
+// ================================================
+$navigation-input-padding: 11px 32px 11px 12px;
+$navigation-input-font-size: 14px;
+$navigation-input-font-color: $font-color;
+$navigation-input-border-color: $gray-03;
+$navigation-input-border-color-hover: $font-color-hover;
+$navigation-input-background-color: $gray-01;
+$navigation-input-border-radius: 4px;
+
+
+// SEARCH ICON
+// ================================================
+$navigation-search-icon-color: lighten($font-color, 30%);
+$navigation-search-icon-color-hover: $font-color-hover;
+
+
+// DROPDOWN
+// ================================================
+$dropdown-width: 180px;
+$dropdown-max-height: 2500px;
+$dropdown-background-color: $submenu-background-color;
+$dropdown-box-shadow-landscape: 0 12px 20px -5px rgba(0, 0, 0, 0.05);
+$dropdown-box-shadow-landscape-first-level: inset 0 1px 0 $border-color, 0 12px 20px -5px rgba(0, 0, 0, 0.05);
+$dropdown-item-background-color-active: lighten($gray-02, 4%);
+$dropdown-link-border-color: $border-color;
+$dropdown-link-font-color: $font-color;
+$dropdown-link-font-color-hover: $main-color;
+$dropdown-link-font-size: 13px;
+$dropdown-link-padding: 14px 19px;
+$dropdown-link-padding-landscape: 19px !important;
+
+// Dropdown levels
+$dropdown-link-padding-level-2: 32px;
+$dropdown-link-padding-level-3: 48px;
+$dropdown-link-padding-level-4: 48px;
+$dropdown-link-padding-level-5: 64px;
+$dropdown-link-padding-level-6: 128px;
+
+
+// DROPDOWN HORIZONTAL
+// ================================================
+$dropdown-horizontal-link-padding: 19px 19px;
+$dropdown-horizontal-border-top-color: lighten($border-color, 3%);
+$dropdown-horizontal-box-shadow-landscape: inset 0 1px 0 $border-color, 0 12px 20px -5px rgba(0, 0, 0, 0.05);
+
+
+// MEGAMENU
+// ================================================
+$megamenu-max-height: 2500px;
+$megamenu-font-size: 14px;
+$megamenu-font-color: $font-color;
+$megamenu-background-color: $submenu-background-color;
+$megamenu-border-color: $border-color;
+$megamenu-box-shadow-landscape: inset 0 1px 0 $border-color, 0 12px 20px -5px rgba(0, 0, 0, 0.05);
+$megamenu-container-padding: 16px;
+
+
+// LISTS
+// ================================================
+$navigation-list-margin: 8px 0 0;
+$navigation-list-padding: 0 20px 0 0;
+$navigation-list-border-color: $border-color;
+$navigation-list-link-padding: 10px 30px 10px 30px;
+$navigation-list-link-font-size: 13px;
+$navigation-list-background-color-hover: lighten($gray-02, 4%);
+$navigation-list-heading-padding: 0 16px 13px;
+$navigation-list-heading-color: $font-color;
+$navigation-list-font-color-hover: $font-color-hover;
+
+
+// TABS
+// ================================================
+$navigation-tabs-link-padding: 14px 16px;
+$navigation-tabs-link-font-size: 14px;
+$navigation-tabs-background-color: $gray-01;
+$navigation-tabs-background-color-hover: $white;
+$navigation-tabs-font-color: $font-color;
+$navigation-tabs-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
+
+// Tabs pane
+$navigation-tabs-pane-padding: 16px;
+$navigation-tabs-pane-font-size: 15px;
+
+
+// TRANSPARENT NAVIGATION
+// ================================================
+$transparent-navigation-background-color: transparent;
+$transparent-navigation-brand-color: $white;
+$transparent-navigation-toggler-icon-color: $white;
+$transparent-navigation-link-font-color: $white;
+$transparent-submenu-indicator-color: $white;
+$transparent-submenu-indicator-color-hover: $white;
+$transparent-navigation-input-font-color: $white;

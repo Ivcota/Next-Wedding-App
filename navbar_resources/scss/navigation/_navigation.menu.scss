@@ -1,0 +1,177 @@
+
+/* NAVIGATION MENU
+================================*/
+.navigation-menu{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0rem;
+	display: inline-block;
+	float: left;
+	
+	@media (min-width: $landscape-width){
+		width: auto;
+		@include flex();
+		@include flexAlignCenterVertically();
+		
+		.navigation &{
+			@include flexSelfStretch();
+			@include flexStretch();
+		}
+		
+		.navigation-logo-top &{
+			@include flexAlignCenter();
+		}
+	}
+}
+
+/* Navbar item */ 
+.navigation-item{
+	width: 100%;
+	margin: 0;
+	float: left;
+	display: inline-block;
+	
+	@media (min-width: $landscape-width){
+		width: auto;
+	}
+}
+
+/* Navbar link */ 
+.navigation-link{
+	width: 100%;
+	padding: $navigation-link-padding;
+	@include flex();
+	@include flexAlignCenterVertically();
+	position: relative;
+	font-size: $navigation-link-font-size;
+	letter-spacing: $navigation-link-letter-spacing;
+	color: $navigation-link-font-color;
+	border-bottom: solid 1px $navigation-link-border-color;
+	@include transition(color .3s);
+	
+	&:visited{
+		color: $navigation-link-font-color;
+	}
+	
+	.navigation-item:last-child &{
+		@media (min-width: $landscape-width){
+			border-top: none;
+			border-bottom: none;
+		}
+	}
+	
+	.navigation-item:not(.navigation-brand-text):hover &,
+	.navigation-item:not(.navigation-brand-text):focus &,
+	.navigation-item:not(.navigation-brand-text).is-active &{
+		text-decoration: none !important;
+		color: $navigation-link-font-color-hover;
+		background-color: $navigation-link-background-color-hover;
+	}
+	
+	@media (min-width: $landscape-width){
+		height: 100%;
+		padding: $navigation-link-padding-landscape;
+		line-height: $navigation-height;
+		border: none;
+	}
+	
+	.navigation-menu.navigation-social-menu + .navigation-menu:not(.navigation-social-menu) .navigation-item:first-child &{
+		border-top: solid 1px $navigation-link-border-color;
+		
+		@media (min-width: $landscape-width){
+			border-top: none;
+		}
+	}
+	
+	// Link with icons and text
+	i{
+		width: $navigation-link-text-icon-width;
+		float: left;
+		text-align: center;
+		font-size: $navigation-link-text-icon-font-size;
+		line-height: 0;
+		
+		// Font Awesome 5 icons
+		&[class*=fa]{
+			font-size: $navigation-link-text-icon-font-awesome-size;
+		}
+		
+		@media (min-width: $landscape-width){
+			width: auto;
+		}
+		
+		+ span{
+			padding-left: 8px;
+		}
+	}
+	
+	// Icon item
+	.navigation-icon-item &{
+		padding: $navigation-link-icon-item-padding;
+		
+		@media (min-width: $landscape-width){
+			width: 100%;
+			margin: 0;
+			padding: $navigation-link-icon-item-padding-landscape;
+			border-left: solid 1px $navigation-link-border-color;
+		}	
+		
+		span:not(.submenu-indicator){
+			@media (min-width: $landscape-width){
+				display: none;
+			}
+		}
+		
+		.navigation-badge{
+			@media (min-width: $landscape-width){
+				right: 10px;
+			}
+		}
+		
+		i{				
+			@media (min-width: $landscape-width){
+				width: $navigation-link-icon-item-icon-width;
+				height: $navigation-link-icon-item-icon-height;
+				margin: 0;
+				line-height: 26px;
+				text-align: center;
+				float: left;
+				font-size: $navigation-link-icon-item-font-size;
+				
+				// Font Awesome 5 icons
+				&[class*=fa]{
+					width: auto;
+					font-size: $navigation-link-icon-item-font-awesome-size;
+				}
+			}
+		}
+	}
+	
+	// Avatar item
+	.navigation-avatar-item &{
+		font-size: $navigation-link-avatar-font-size;
+		font-weight: $navigation-link-avatar-font-weight;
+		
+		img{
+			width: $navigation-link-avatar-image-width;
+			border: solid 2px $navigation-link-avatar-border-color;
+			border-radius: $navigation-link-avatar-border-radius;
+		}
+		
+		span{
+			margin-left: 8px;
+		}
+	}
+	
+	.navigation-body-section + .navigation-menu:not(.navigation-social-menu) > .navigation-item:first-child > &{
+		border-top: solid 1px $navigation-link-border-color;
+		
+		@media (min-width: $landscape-width){
+			border-top: none;
+		}
+	}
+	
+}
+

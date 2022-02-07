@@ -1,0 +1,37 @@
+
+/* NAVIGATION LOGO
+================================*/
+.navigation-logo{
+	@include flex();
+	@include flexAlignCenterVertically();
+	
+	a{
+		@include flex();
+		@include flexAlignCenterVertically();
+		
+		img{
+			height: $navigation-logo-height;
+			display: block;
+			
+			@media (min-width: $landscape-width){
+				height: $navigation-logo-height-landscape;
+			}
+		}
+	}
+	
+	.navigation-logo-top .navigation-body &{
+		img{
+			width: auto;
+			height: auto;
+		}
+	}
+	
+	.navigation-header &{
+		padding: 0 1rem;
+	}
+	
+	&.navigation-item a img{
+		width: auto;
+		height: auto;
+	}
+}

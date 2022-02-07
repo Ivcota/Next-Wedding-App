@@ -1,0 +1,17 @@
+
+/* BORDER TOP-BOTTOM SKIN
+================================*/
+@media (min-width: 992px) {
+  .navigation-menu:not(.navigation-social-menu) .navigation-item:not(.navigation-icon-item) .navigation-link {
+    padding: 7px 16px 7px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border 0.3s;
+  }
+  .navigation-item:not(.navigation-brand-text):hover .navigation-link,
+  .navigation-item:not(.navigation-brand-text):focus .navigation-link,
+  .navigation-item:not(.navigation-brand-text).is-active .navigation-link {
+    border-top-color: #7367F0 !important;
+    border-bottom-color: #7367F0 !important;
+  }
+}

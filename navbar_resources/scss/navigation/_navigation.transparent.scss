@@ -1,0 +1,95 @@
+
+/* TRANSPARENT NAVIGATION
+ ================================*/
+.navigation-transparent{
+	background-color: $transparent-navigation-background-color;
+	
+	.navigation-header{
+		 .navigation-brand-text{	
+			a{
+				color: $transparent-navigation-brand-color;
+			}
+		}
+	}
+	
+	@media (min-width: $landscape-width){
+		.navigation-body .navigation-brand-text{	
+			a{
+				color: $transparent-navigation-brand-color;
+			}
+		}
+	}
+	
+	.navigation-button-toggler{
+		.hamburger-icon{
+			color: $transparent-navigation-toggler-icon-color;
+		}
+	}
+	
+	@media (min-width: $landscape-width){		
+		.navigation-link{
+			color: $transparent-navigation-link-font-color;
+			
+			> .submenu-indicator:after{
+				border-color: transparent $transparent-submenu-indicator-color $transparent-submenu-indicator-color transparent;
+			}
+		}
+		
+		.navigation-item:hover > .navigation-link > .submenu-indicator:after,
+		.navigation-item:focus > .navigation-link > .submenu-indicator:after,
+		.navigation-item.is-active > .navigation-link > .submenu-indicator:after{
+			border-color: transparent $transparent-submenu-indicator-color-hover $transparent-submenu-indicator-color-hover transparent;
+		}
+		
+		.navigation-item:not(.navigation-brand-text):hover .navigation-link,
+		.navigation-item:not(.navigation-brand-text):focus .navigation-link,
+		.navigation-item:not(.navigation-brand-text).is-active .navigation-link{
+			color: $transparent-navigation-link-font-color;
+		}
+		
+		.navigation-icon-item .navigation-link{
+			border-left: none;
+		}
+	}
+	
+	@media (min-width: $landscape-width){
+		.navigation-input{
+			color: $transparent-navigation-input-font-color;
+			background-color: rgba(255, 255, 255, 0.01);
+			border-color: rgba(255, 255, 255, 0.05);
+			
+			::-webkit-input-placeholder { 
+				color: rgba(255, 255, 255, 0.2);
+			}
+			::-moz-placeholder { 
+				color: rgba(255, 255, 255, 0.2);
+			}
+			:-ms-input-placeholder {
+				color: rgba(255, 255, 255, 0.2);
+			}
+			:-moz-placeholder {
+				color: rgba(255, 255, 255, 0.2);
+			}
+		}
+	}
+	
+	@media (min-width: $landscape-width){
+		.navigation-social-menu{
+			.navigation-link{
+				i{
+					background-color: rgba(255, 255, 255, 0.05);
+				}
+			}
+		}
+	}
+	
+	@media (min-width: $landscape-width){
+		.navigation-item > .navigation-dropdown,
+		.navigation-megamenu.is-visible{
+			border-top-color: transparent;
+		}
+	}
+	
+	
+	
+}

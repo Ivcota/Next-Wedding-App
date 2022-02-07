@@ -1,0 +1,65 @@
+
+/* NAVIGATION FULLSCREEN
+ ================================*/
+ @media (max-width: $landscape-width - 1px){
+	.navigation-fullscreen{
+		.navigation-body{
+			width: 100%;
+			@include flex();
+			@include flexAlignCenter();
+			@include flexAlignCenterVertically();
+			@include flexColumn();
+		}
+		
+		.navigation-body-header{
+			border: none;
+			padding: 0;
+			
+			.navigation-body-close-button,
+			.navigation-brand-text,
+			.navigation-logo{
+				position: absolute;
+				top: 20px;
+			}
+			
+			.navigation-body-close-button{
+				right: 20px;
+			}
+			
+			.navigation-brand-text,
+			.navigation-logo{
+				left: 20px;
+			}
+		}
+		
+		.navigation-menu{
+			width: 300px;
+		}
+		
+		.navigation-link,
+		.navigation-dropdown-link{
+			border: none;
+		}
+		.navigation-link{
+			@include flexAlignCenter();
+		}
+		.navigation-dropdown-link{
+			text-align: center;
+		}
+		
+		.navigation-btn{
+			width: 300px;
+			-webkit-align-self: center;
+			align-self: center;
+		}
+		
+		.navigation-inline-form{
+			width: 300px;
+			margin: auto;
+			
+			.navigation-btn{
+				width: auto;
+			}
+		}
+	}
+}

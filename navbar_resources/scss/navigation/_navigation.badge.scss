@@ -1,0 +1,27 @@
+
+/* NAVIGATION BADGE
+================================*/
+.navigation-badge{
+	min-width: $navigation-badge-min-width;
+	height: $navigation-badge-height;
+	margin: 0 5px;
+	display: inline-block;
+	line-height: 18px;
+	text-align: center;
+	font-size: $navigation-badge-font-size;
+	color: $navigation-badge-color;
+	border-radius: $navigation-badge-border-radius;
+	background-color: $navigation-badge-background-color;
+	
+	@media (min-width: $landscape-width){
+		.navigation-link &{
+			position: absolute;
+			right: -2px;
+			top: calc(50% + -20px);
+		}
+		
+		.navigation-dropdown-link &{
+			position: static;
+		}
+	}
+}

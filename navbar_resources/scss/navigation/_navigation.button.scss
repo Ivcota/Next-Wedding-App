@@ -1,0 +1,29 @@
+
+/* NAVIGATION BUTTON
+================================*/
+.navigation-btn{
+	width: 100%;
+	padding: $navigation-button-padding;
+	text-align: center;
+	display: block;
+	line-height: 1.4;
+	font-size: $navigation-button-font-size;
+	white-space: nowrap;
+	color: #fff;
+	cursor: pointer;
+	border-radius: $navigation-button-border-radius;
+	border: solid 1px $navigation-button-background-color;
+	background-color: $navigation-button-background-color;
+	@include transition(opacity .3s, background .3s);
+	
+	&:hover,
+	&:focus{
+		color: $navigation-button-font-color-hover;
+		text-decoration: none;
+		background-color: darken($navigation-button-background-color, 4%);
+	}
+	
+	@media (min-width: $landscape-width){
+		width: auto;
+	}
+}

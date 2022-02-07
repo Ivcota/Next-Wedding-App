@@ -1,0 +1,65 @@
+
+/* MEGAMENU LIST
+================================*/
+.navigation-list{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	@media (min-width: $landscape-width){
+		[class^=navigation-col]:last-of-type &{
+			padding: 0;
+		}
+	}
+	
+	> li{
+		width: 100%;
+		margin: 0;
+		
+		> a{
+			padding: $navigation-list-link-padding;
+			@include flex();
+			@include flexAlignCenterVertically();
+			position: relative;
+			font-size: $navigation-list-link-font-size;
+			color: $font-color;
+			text-decoration: none;
+			@include transition(color .3s, background .3s);
+			&:hover{
+				color: $navigation-list-font-color-hover;
+				background-color: $navigation-list-background-color-hover;
+			}
+			
+			@media (min-width: $landscape-width){
+				border-right: solid 1px $navigation-list-border-color;
+			}
+			
+			[class^=navigation-col]:last-of-type &{
+				border-right: none;
+			}
+		}
+		
+		&:not(.navigation-list-heading) > a:before{
+			content: "\25E5";
+			position: absolute;
+			left: 12px;
+			font-size: 9px;
+			@include transform(rotate(45deg));
+		}
+	}
+}
+
+.navigation-list-heading{
+	text-transform: uppercase;
+	font-weight: bold;
+	
+	> a{
+		padding: $navigation-list-heading-padding !important;;
+		
+		&:hover{
+			color: $navigation-list-heading-color !important;
+			background-color: transparent !important;
+		}
+	}
+}

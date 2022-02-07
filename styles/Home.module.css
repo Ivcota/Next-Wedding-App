@@ -1,0 +1,29 @@
+/* .home {
+} */
+
+.title-header {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-header h1 {
+  margin: 0rem 0rem;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 100;
+  font-size: 48px;
+}
+
+.invite-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invite-date h1 {
+  font-size: 70px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+  margin: 0;
+}

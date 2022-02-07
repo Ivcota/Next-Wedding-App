@@ -1,0 +1,20 @@
+
+// Flex
+@import 'flex-mixins/flex';
+
+// Transition
+@mixin transition($args...) {
+	transition: $args;
+}
+
+// Transform
+@mixin transform($args...) {
+	transform: $args;
+}
+
+// Media Queries
+@mixin landscape{
+	@media (min-width: #{$landscape}) {
+		@content;
+	}
+}

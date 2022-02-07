@@ -1,0 +1,169 @@
+
+/* DARK SKIN
+================================*/
+
+// Overriding variables
+$background-color: #151515;
+$font-color: lighten($gray-05, 20%);
+$border-color: #333333;
+$submenu-background-color: #222222;
+
+.navigation{
+	background-color: $background-color
+}
+
+.navigation-body{
+	background-color: $background-color
+}
+.navigation-body-header{
+	border-bottom-color: $border-color;
+}
+.navigation-body-close-button{
+	color: $font-color;
+}
+
+.navigation-brand-text{	
+	a{
+		color: $font-color;
+	}
+}
+
+.navigation-button-toggler{
+	.hamburger-icon{
+		color: $font-color;
+	}
+}
+
+.navigation-link{
+	color: $font-color;
+	border-bottom-color: $border-color;
+	
+	&:visited{
+		color: $font-color;
+	}
+	
+	.navigation-item:last-child &{
+		border-bottom-color: $border-color;
+	}
+	
+	.navigation-icon-item &{
+		@media (min-width: $landscape-width){
+			border-left-color: $border-color;
+		}
+	}
+}
+
+.navigation-social-menu{	
+	.navigation-item{		
+		.navigation-link{			
+			i{
+				background-color: $submenu-background-color;
+			}
+		}
+	}
+}
+
+.submenu-indicator:after{
+	border-color: transparent $font-color $font-color transparent;
+}
+
+.navigation-text{
+	color: $font-color;
+}
+
+.navigation-input{
+	background-color: $background-color;
+	border-color: $border-color;
+	color: $font-color;
+}
+.navigation-search-icon{
+	color: $font-color;
+}
+
+.navigation-dropdown{
+	background-color: $submenu-background-color;
+	
+	.navigation-item > &{
+		border-top-color: $border-color;
+	}
+}
+
+.navigation-dropdown-link{
+	color: $font-color;
+	border-bottom-color: $border-color;
+	
+	.navigation-dropdown-item:hover > &,
+	.navigation-dropdown-item:focus > &,
+	.navigation-dropdown-item.is-active > &{
+		background-color: $background-color;
+	}
+	
+	> .submenu-indicator{
+		border-color: transparent $font-color $font-color transparent;
+	}
+}
+
+.navigation-megamenu{
+	background-color: $submenu-background-color;
+	
+	&.is-visible{
+		border-bottom-color: $border-color;
+	}
+	
+	@media (min-width: $landscape-width){		
+		&.is-visible{
+			border-top-color: $border-color;
+		}
+	}
+}
+
+.navigation-list{	
+	> li{		
+		> a{
+			color: $font-color;
+			border-right-color: $border-color;
+			
+			&:hover{
+				color: $navigation-list-font-color-hover;
+				background-color: lighten($submenu-background-color, 5%);
+			}
+		}
+	}
+}
+
+.navigation-list-heading{	
+	> a{		
+		&:hover{
+			color: lighten($font-color, 5%) !important;
+		}
+	}
+}
+.navigation-tabs{
+	background-color: $submenu-background-color;
+	
+	@media (min-width: $landscape-width){
+		&:after{
+			background-color: lighten($submenu-background-color, 5%);
+		}
+	}
+}
+.navigation-tabs-nav{	
+	> li{
+		a{
+			color: $font-color;
+			background-color: $submenu-background-color;
+		}
+		
+		&.is-active a,
+		&:hover a,
+		&:active a{
+			background-color: lighten($submenu-background-color, 5%);
+		}
+	}
+}
+.navigation-tabs-pane{
+	color: $font-color;
+	background-color: lighten($submenu-background-color, 5%);
+}
+
+

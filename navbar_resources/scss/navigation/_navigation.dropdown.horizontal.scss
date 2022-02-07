@@ -1,0 +1,40 @@
+
+/* NAVIGATION HORIZONTAL DROPDOWN
+================================*/
+.navigation-dropdown-horizontal{
+	background-color: $dropdown-background-color;
+
+	@media (min-width: $landscape-width){
+		width: 100% !important;
+		left: 0;
+
+		.navigation-dropdown-horizontal{
+			left: 0;
+			top: 100%;
+			box-shadow: $dropdown-horizontal-box-shadow-landscape;
+		}
+
+		.navigation-dropdown-item{
+			width: auto;
+		}
+
+		.navigation-dropdown-link{
+			padding: $dropdown-horizontal-link-padding;
+			@include flex();
+		}
+
+		.submenu-indicator{
+			right: 0px;
+			position: relative;
+
+			&:after{
+				margin-top: 5px;
+				@include transform(rotate(45deg));
+			}
+		}
+
+		&.is-visible{
+			display: block;
+		}
+	}
+}

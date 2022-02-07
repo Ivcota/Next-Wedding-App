@@ -1,0 +1,44 @@
+
+/* MINI-CIRCLE SKIN
+================================*/
+
+@media (min-width: $landscape-width){
+	.navigation-menu:not(.navigation-social-menu){
+		.navigation-item:not(.navigation-avatar-item):not(.navigation-logo){
+			.navigation-link{
+				z-index: 1;
+			}
+			
+			.navigation-link:after{
+				content: "";
+				width: 5px;
+				height: 5px;
+				margin-left: 5px;
+				margin-top: -2.5px;
+				top: 50%;
+				left: 0;
+				position: absolute;
+				border-radius: 50%;
+				z-index: -1;
+				@include transition(color .3s, background .3s);
+			}
+			
+			&:not(.navigation-brand-text):hover .navigation-link:after,
+				&:not(.navigation-brand-text):focus .navigation-link:after,
+				&:not(.navigation-brand-text).is-active .navigation-link:after{
+					background-color: $main-color !important;
+				}
+		}
+	}
+
+	.navigation-menu:not(.navigation-social-menu){
+		.navigation-item:not(.navigation-avatar-item):not(.navigation-logo){			
+			.navigation-link:after{
+				margin-top: auto;
+				margin-left: -2.5px;
+				top: 70%;
+				left: 50%;
+			}
+		}
+	}
+}

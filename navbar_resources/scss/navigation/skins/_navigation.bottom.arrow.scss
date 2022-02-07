@@ -1,0 +1,34 @@
+
+/* BOTTOM ARROW SKIN
+================================*/
+
+@media (min-width: $landscape-width){
+	.navigation-menu:not(.navigation-social-menu){
+		.navigation-item:not(.navigation-avatar-item):not(.navigation-logo){
+			.navigation-link{
+				z-index: 1;
+			}
+			
+			.navigation-link:after{
+				content: "";
+				width: 12px; 
+				margin-left: -6px;
+				height: 0; 
+				top: 70%;
+				left: 50%;
+				position: absolute;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: 10px solid transparent;
+				z-index: -1;
+				@include transition(border .3s);
+			}
+			
+			&:not(.navigation-brand-text):hover .navigation-link:after,
+			&:not(.navigation-brand-text):focus .navigation-link:after,
+			&:not(.navigation-brand-text).is-active .navigation-link:after{
+				border-bottom-color: $main-color;
+			}
+		}
+	}
+}

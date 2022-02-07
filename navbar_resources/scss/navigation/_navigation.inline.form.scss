@@ -1,0 +1,88 @@
+
+/* NAVIGATION INLINE FORM
+================================*/
+.navigation-inline-form{
+	position: relative;
+	
+	@media (min-width: $landscape-width){
+		@include flex();
+	}
+	
+	.navigation-btn{
+		@include flex();
+		width: auto;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 4px;
+		background-color: transparent !important;
+		border-color: transparent !important;
+		box-shadow: none !important;
+	}
+}
+
+.navigation-input{
+	width: 100%;
+	padding: $navigation-input-padding;
+	outline-width: 0;
+	font-size: $navigation-input-font-size;
+	color: $navigation-input-font-color;
+	line-height: 1.4;
+	box-shadow: none;
+	border-radius: $navigation-input-border-radius;
+	background-color: lighten($navigation-input-background-color, 1%);
+	border-style: solid;
+	border-width: 1px;
+	border-color: $navigation-input-border-color;
+	@include transition(border .3s);
+	
+	&:hover,
+	&:focus{
+		border-color: $navigation-input-border-color-hover;
+	}
+	
+	&::placeholder{
+		color: lighten($navigation-input-font-color, 1%);
+	}
+	&:-ms-input-placeholder{
+		color: lighten($navigation-input-font-color, 1%);
+	}
+	&::-ms-input-placeholder{
+		color: lighten($navigation-input-font-color, 1%);
+	}
+}
+
+.navigation-search-icon{
+	width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    color: $navigation-search-icon-color;
+    text-align: left;
+    text-indent: -9999px;
+	border: 2px solid;
+	border-radius: 50%;
+	@include transform(rotate(-45deg));
+	@include transition(color .3s);
+	
+	&:after, 
+	&:before {
+		content: '';
+		pointer-events: none;
+	}
+	&:before {
+		width: 2px;
+		height: 7px;
+		top: 10px;
+		position: absolute;
+		left: 50%;
+		border-radius: 0 0 1px 1px;
+		box-shadow: inset 0 0 0 32px;
+		@include transform(translateX(-50%));
+	}
+	
+	.navigation-btn:hover &{
+		color: $navigation-search-icon-color-hover;
+	}
+}

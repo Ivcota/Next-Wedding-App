@@ -1,0 +1,55 @@
+
+/* SUBMENU INDICATOR
+================================*/
+.submenu-indicator{
+	width: $submenu-indicator-width;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 20000;
+	//background: lightblue;
+	
+	@media (min-width: $landscape-width){
+		width: $submenu-indicator-width-landscape;
+		height: $submenu-indicator-height-landscape;
+		margin-left: 6px;
+		float: right;
+		position: relative;
+		
+		li:not(.navigation-icon-item) span:not(.navigation-badge) + &,
+		li:not(.navigation-icon-item) i + span + .navigation-badge + &{
+			margin-left: 0;
+		}
+	}
+	
+	&:after{
+		height: $submenu-indicator-width-after;
+		width: $submenu-indicator-height-after;
+		margin: $submenu-indicator-margin-after;
+		top: 50%;
+		left: 50%;
+		content: "";
+		position: absolute;
+		border-style: solid;
+		border-width: 0 $submenu-indicator-border-width-after $submenu-indicator-border-width-after 0;
+		border-color: transparent $submenu-indicator-color $submenu-indicator-color transparent;
+		@include transform(rotate(45deg));
+		@include transition(border .3s, transform .3s);
+		
+		.navigation-item:hover > .navigation-link > &,
+		.navigation-item:focus > .navigation-link > &,
+		.navigation-item.is-active > .navigation-link > &{
+			border-color: transparent $submenu-indicator-color-hover $submenu-indicator-color-hover transparent;
+		}
+	}
+
+	
+	&.is-active:after{
+		@include transform(rotate(-135deg));
+		
+		@media (min-width: $landscape-width){
+			@include transform(rotate(45deg));
+		}
+	}
+}

@@ -1,0 +1,13 @@
+
+/* NAVIGATION TEXT
+================================*/
+.navigation-text{
+	padding: $navigation-text-padding;
+	display: inline-block;
+	color: $font-color;
+	font-size: $navigation-text-font-size;
+	
+	@media (min-width: $landscape-width){
+		padding: $navigation-text-padding-landscape;
+	}
+}

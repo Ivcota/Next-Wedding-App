@@ -1,0 +1,19 @@
+
+/* NAVIGATION BRAND TEXT
+================================*/
+.navigation-brand-text{	
+	a{
+		font-size: $navigation-brand-font-size;
+		font-weight: $navigation-brand-font-weight;
+		color: $navigation-brand-color;
+		text-decoration: none;
+		
+		@media (min-width: $landscape-width){
+			font-size: $navigation-brand-font-size-landscape;
+		}
+	}
+	
+	.navigation-header &{
+		padding: 0 1rem;
+	}
+}
