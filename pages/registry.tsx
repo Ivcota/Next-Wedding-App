@@ -33,14 +33,13 @@ const Registry: NextPage = () => {
       ) : (
         <div className="modal-content">
           <p>
-            Below you can view our registries. Please do not feel obligated to
-            get us anything. We will not be reading out names of those who gift
-            us. We’re just happy that you love us!
+            Below you can view our registries. We will not be reading out names
+            of those who gift us. We’re just happy that you love us!
           </p>
         </div>
       )}
       <Separator />
- 
+
       <ButtonFlexContainer>
         <a
           className={`${styles["button-spaced"]} button`}
