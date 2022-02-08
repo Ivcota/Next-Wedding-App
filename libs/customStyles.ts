@@ -9,4 +9,7 @@ export const customStyles = {
     backgroundColor: "var(--background)",
     borderRadius: "5px",
   },
+  overlay: {
+    background: "rgba(4, 39, 50, 0.5)",
+  },
 };

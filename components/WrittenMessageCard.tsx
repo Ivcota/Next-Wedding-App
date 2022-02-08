@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import styles from "../styles/WrittenMessageCard.module.css";
 import Modal from "react-modal";
@@ -43,15 +43,17 @@ const WrittenMessageCard: React.FC<Props> = ({
         Send Email
       </button>
 
-      <Modal style={customStyles} isOpen={isOpen}>
-        <div className="modal-content">
-          <h1>Send Reply</h1>
-          <p>Send a custom reply to {name}!</p>
-          <button className="button button--spaced">Open Email</button>
+      <AnimatePresence>
+        <Modal style={customStyles} isOpen={isOpen}>
+          <div className="modal-content">
+            <h1>Send Reply</h1>
+            <p>Send a custom reply to {name}!</p>
+            <button className="button button--spaced">Open Email</button>
 
-          <button className="button button--spaced">Mark as Sent</button>
-        </div>
-      </Modal>
+            <button className="button button--spaced">Mark as Sent</button>
+          </div>
+        </Modal>
+      </AnimatePresence>
     </motion.div>
   );
 };
