@@ -40,16 +40,7 @@ const Registry: NextPage = () => {
         </div>
       )}
       <Separator />
-      <ButtonFlexContainer>
-        <a
-          className="button"
-          rel="noopener noreferrer"
-          href="https://www.zola.com/registry/iversonandholly"
-          target="_blank"
-        >
-          Honeymoon Fund 
-        </a>
-      </ButtonFlexContainer>
+ 
       <ButtonFlexContainer>
         <a
           className={`${styles["button-spaced"]} button`}
