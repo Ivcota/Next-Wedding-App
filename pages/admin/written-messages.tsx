@@ -9,7 +9,6 @@ import { db } from "../../libs/firebase";
 import { collection, orderBy, query } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { AnimatePresence, motion } from "framer-motion";
-
 const AdminWrittenMessages = () => {
   const writtenMessagesRef = collection(db, "guest-book-written");
 

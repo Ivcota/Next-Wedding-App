@@ -11,6 +11,8 @@ interface Props {
   replied: boolean;
 }
 
+Modal.setAppElement("#__next");
+
 const WrittenMessageCard: React.FC<Props> = ({
   name,
   email,
