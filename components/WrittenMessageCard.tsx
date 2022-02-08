@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "../styles/WrittenMessageCard.module.css";
 import Modal from "react-modal";
 import { customStyles } from "../libs/customStyles";
+import ButtonFlexContainer from "./ButtonFlexContainer";
 
 interface Props {
   name: string;
@@ -46,9 +47,19 @@ const WrittenMessageCard: React.FC<Props> = ({
       <AnimatePresence>
         <Modal style={customStyles} isOpen={isOpen}>
           <div className="modal-content">
+            <div
+              onClick={() => setIsOpen(false)}
+              className={styles["close-icon"]}
+            >
+              X
+            </div>
             <h1>Send Reply</h1>
             <p>Send a custom reply to {name}!</p>
-            <button className="button button--spaced">Open Email</button>
+            <ButtonFlexContainer>
+              <a href={`mailto:${email}`} className="button button--spaced">
+                Open Email
+              </a>
+            </ButtonFlexContainer>
 
             <button className="button button--spaced">Mark as Sent</button>
           </div>

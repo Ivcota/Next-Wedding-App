@@ -29,3 +29,9 @@
 .card__button:hover {
   background-color: rgb(1, 39, 88);
 }
+
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}

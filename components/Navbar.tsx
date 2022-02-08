@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavStore, useUserStore } from "./../libs/stores";
 
 const Navbar = () => {
-  const { isAdmin, setAdmin, logOut } = useUserStore();
+  const { isAdmin, logOut } = useUserStore();
   const { isOpen, setIsOpen } = useNavStore();
 
   const closeNavbar = () => {
