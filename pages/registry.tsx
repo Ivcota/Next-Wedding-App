@@ -63,7 +63,8 @@ const Registry: NextPage = () => {
       </ButtonFlexContainer>
       <ButtonFlexContainer>
         <a
-          className={`button ${styles["button-spaced"]} ${styles["button--inactive"]} `}
+          className={`button ${styles["button-spaced"]}`}
+          href="https://www.target.com/gift-registry/gift/thediles"
           target="_blank"
           rel="noopener noreferrer"
         >
