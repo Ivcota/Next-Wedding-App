@@ -30,6 +30,8 @@ interface UserState {
 interface UserStateStore extends UserState {
   setUserState: (UserState: UserState) => void;
   setAdmin: (state: boolean) => void;
+  restoreAuth: () => void;
+  logOut: () => void;
 }
 
 export const useUserStore = create<UserStateStore>((set) => {
@@ -40,10 +42,28 @@ export const useUserStore = create<UserStateStore>((set) => {
     photo: "",
     isAdmin: false,
     setUserState: ({ id, email, name, photo, isAdmin }: UserState) => {
+      localStorage.setItem(
+        "iverson-holly",
+        JSON.stringify({ id, email, name, photo, isAdmin })
+      );
+
       set({ id, email, name, photo, isAdmin });
     },
     setAdmin: (state) => {
       set({ isAdmin: state });
+    },
+    restoreAuth: () => {
+      const currentAuth = JSON.parse(
+        localStorage.getItem("iverson-holly") as string
+      );
+
+      if (currentAuth) {
+        set(currentAuth);
+      }
+    },
+    logOut: () => {
+      localStorage.setItem("iverson-holly", JSON.stringify(null));
+      set({ id: "", email: "", name: "", photo: "", isAdmin: false });
     },
   };
 });

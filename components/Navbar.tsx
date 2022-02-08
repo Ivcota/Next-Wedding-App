@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavStore, useUserStore } from "./../libs/stores";
 
 const Navbar = () => {
-  const { isAdmin, setAdmin } = useUserStore();
+  const { isAdmin, setAdmin, logOut } = useUserStore();
   const { isOpen, setIsOpen } = useNavStore();
 
   const closeNavbar = () => {
@@ -80,7 +80,7 @@ const Navbar = () => {
               <div
                 onClick={(e) => {
                   e.preventDefault();
-                  setAdmin(false);
+                  logOut();
                 }}
               >
                 <a href="#" className="navigation-link">
