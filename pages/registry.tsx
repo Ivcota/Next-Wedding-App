@@ -17,18 +17,11 @@ const Registry: NextPage = () => {
       <Separator />
       {message ? (
         <div className="modal-content">
-          <p>Thank you so much! We can’t wait to see your message.</p>
           <p>
-            If you would like to see some of the things we were planning on
-            getting, you can view those items through the links below.
+            Thank you so much! We can’t wait to see your messages. We look
+            forward to seeing you!
           </p>
-          <p>
-            <b>
-              We will not be reading out names of those who got us gifts & gifts
-              are not required to be a part of our wedding.
-            </b>
-          </p>
-          <p>We look forward to seeing you!</p>
+          <p>Thank you for being a part of our big day!</p>
         </div>
       ) : (
         <div className="modal-content">
