@@ -47,6 +47,16 @@ const Registry: NextPage = () => {
           href="https://www.zola.com/registry/iversonandholly"
           target="_blank"
         >
+          Honeymoon Fund 
+        </a>
+      </ButtonFlexContainer>
+      <ButtonFlexContainer>
+        <a
+          className={`${styles["button-spaced"]} button`}
+          rel="noopener noreferrer"
+          href="https://www.zola.com/registry/iversonandholly"
+          target="_blank"
+        >
           Zola Registry
         </a>
       </ButtonFlexContainer>
