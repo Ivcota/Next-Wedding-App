@@ -30,6 +30,7 @@ const AdminWrittenMessages = () => {
               <AnimatePresence key={doc.id}>
                 <WrittenMessageCard
                   key={doc.id}
+                  id={doc.id}
                   name={doc.data().name}
                   email={doc.data().email}
                   replied={doc.data().replied}
