@@ -16,7 +16,7 @@ const VirtualEvent: NextPage = () => {
       animate={{ x: 0, opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <PageTitle>Virtual Events</PageTitle>
+      <PageTitle>Wedding Date</PageTitle>
       <Separator />
 
       <div className={styles["meeting-info"]}>
