@@ -53,6 +53,11 @@ const Navbar = () => {
           ) : (
             <>
               <li onClick={closeNavbar} className="navigation-item">
+                <Link href="/rsvp">
+                  <a className="navigation-link">R.S.V.P</a>
+                </Link>
+              </li>
+              <li onClick={closeNavbar} className="navigation-item">
                 <Link href="/virtual-event">
                   <a className="navigation-link">Virtual Event</a>
                 </Link>

@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import { useUserStore } from "../libs/stores";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { restoreAuth } = useUserStore();
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Script strategy="beforeInteractive" src="/navigation.js" />
       <Navbar />
       <AnimatePresence>
+        <Toaster />
         <Component {...pageProps} />
       </AnimatePresence>
       <Footer />

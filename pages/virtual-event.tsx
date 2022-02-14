@@ -44,7 +44,7 @@ const VirtualEvent: NextPage = () => {
         />
       </ButtonFlexContainer>
       <ButtonFlexContainer>
-        <Link href="/virtual-guest-book">
+        <Link href="/rsvp">
           <a style={{ marginTop: "1rem" }} className="button">
             Next
           </a>
